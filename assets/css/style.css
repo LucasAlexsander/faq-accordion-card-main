@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Kumbh Sans';
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(0deg, hsl(240, 73%, 65%) 20%, hsl(273, 75%, 66%) 100%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.container {
+    max-width: 920px;
+    height: 510px;
+    background: #ffffff;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-areas:
+    "Image Text";
+    overflow: hidden;
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+.image-area {
+    grid-area: "Image";
+    height: 100%;
+    width: 100%;
+}
+
+.area {
+    background: url('../images/bg-pattern-desktop.svg');
+    background-position: -600px bottom;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    width: 430px;
+    height: 670px;
+    margin-right: 50px;
+    padding-left: 40px;
+}
+
+/* woman */
+.image-area img:nth-child(1) {
+    width: 500px;
+    height: auto;
+    margin: 50px 0px 0px -125px;
+}
+/* Box */
+.image-area img:nth-child(2) {
+    position: absolute;
+    margin: 200px 0px 0px -508px;
+}
+
+.text-area {
+    grid-area: "Text";
+    width: 100%;
+    height: 100%;
+}
+
+.text-area .area-texto {
+    width: 340px;
+    height: auto;
+    margin-top: 80px;
+    margin-right: 60px;
+}
+.text-area .area-texto .title {
+    margin-bottom: 35px;
+}
+
+.text-area .area-texto h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+.dados {
+    width: inherit;
+}
+.title-dados {
+    justify-content: space-between;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+.title-dados p:hover {
+    color: hsl(14, 88%, 65%)
+}
+
+.more-info {
+    display: none;
+    color: hsl(238, 29%, 16%);
+    transition: 3s linear;
+}
+
+.more-info p {
+    animation-name: openText;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+@keyframes openText {
+    0% {
+        color: white;   
+    }
+    100% {
+        color: black;   
+    }
+}
+
+.line {
+    margin: 20px 0px;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Responsive */
+@media (max-width: 950px) {
+    body {
+        margin: 0px 100px 0px 0px;
+    }
+    .container {
+        margin-top: 30px;
+        max-width: 400px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: visible;
+    }
+    .image-area {
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        margin-top: -10px;
+    }
+    .area {
+        background: url('../images/bg-pattern-mobile.svg');
+        background-position: top;
+        background-size: 300px;
+        background-repeat: no-repeat;
+        width: 430px;
+        height: 670px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;    
+    }
+    
+    /* woman */
+    .image-area img:nth-child(1) {
+        width: 280px;
+        height: 220px;
+        margin: -120px 0px 0px -40px;
+    }
+    /* Box */
+    .image-area img:nth-child(2) {
+        width: 100px;
+        margin: -25px 0px 0px -113px;
+    }
+    .text-area {
+        margin-top: -55px;
+        display: flex;
+        justify-content: center;
+    }
+    .text-area .area-texto {
+        margin: 0;       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .title-dados {
+        margin-bottom: 0px;
+    }
+    .line {
+        margin: 15px 0px;
+    }
+}
+
+@media (max-width: 495px) {
+    .container {
+        width: 300px;
+        margin: auto;
+        transition: 0.2s linear;
+    }
+    .area {
+        background-size: 240px;
+    }
+    
+    /* woman */
+    .image-area img:nth-child(1) {
+        width: 240px;
+        height: 185px;
+        margin: -105px 0px 0px -40px;
+        transition: 0.2s linear;
+    }
+    /* Box */
+    .image-area img:nth-child(2) {
+        width: 100px;
+        margin: -32px 0px 0px -103px;
+        transition: 0.2s linear;
+    }
+    .text-area {
+        margin-top: -55px;
+        display: flex;
+        justify-content: center;
+        transition: 0.2s linear;
+    }
+    .text-area .area-texto {
+        width: 270px;   
+        transition: 0.2s linear;  
+    }
+}

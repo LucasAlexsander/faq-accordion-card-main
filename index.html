@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt_br"> <!-- Alterar para en -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+
+<body class="flex column">
+
+  <div class="container">
+    <div class="image-area">
+      <div class="area">
+        <img src="assets/images/illustration-woman-online-desktop.svg" alt="">
+        <img src="assets/images/illustration-box-desktop.svg" alt="">
+      </div>
+    </div>
+    <div class="text-area">
+      <div class="area-texto">
+        <div class="title">
+          <h1>FAQ</h1>
+        </div>
+        <!-- Primeira Info -->
+        <div class="dados">
+          <div class="title-dados flex" onclick="abrirInfos('title1', 'info1', 'icon1')">
+            <p class= "title-dado1" id="title1">How many team members can I invite?</p>
+            <img id="icon1" src="assets/images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="more-info" id="info1">
+            <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
+          </div>
+        </div>
+        <div class="line"></div>
+
+        <!-- Segunda Info -->
+        <div class="dados">
+          <div class="title-dados flex" onclick="abrirInfos('title2', 'info2', 'icon2')">
+            <p class= "title-dado1" id="title2">What is the maximum file upload size?</p>
+            <img id="icon2" src="assets/images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="more-info" id="info2">
+            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </div>
+        <div class="line"></div>
+
+        <!-- Terceira Info -->
+        <div class="dados">
+          <div class="title-dados flex" onclick="abrirInfos('title3', 'info3', 'icon3')">
+            <p class= "title-dado1" id="title3">How do I reset my password?</p>
+            <img id="icon3" src="assets/images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="more-info" id="info3">
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+          </div>
+        </div>
+        <div class="line"></div>
+
+        <!-- Quarta Info -->
+        <div class="dados">
+          <div class="title-dados flex" onclick="abrirInfos('title4', 'info4', 'icon4')">
+            <p class= "title-dado1" id="title4">Can I cancel my subscription?</p>
+            <img id="icon4" src="assets/images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="more-info" id="info4">
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </div>
+        <div class="line"></div>
+
+        <!-- Quinta Info -->
+        <div class="dados">
+          <div class="title-dados flex" onclick="abrirInfos('title5', 'info5', 'icon5')">
+            <p class= "title-dado1" id="title5">Do you provide additional support?</p>
+            <img id="icon5" src="assets/images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="more-info" id="info5">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </div>
+        <div class="line"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/LucasAlexsander">Lucas Alexsander Barbosa Cruz</a>.
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
